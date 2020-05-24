@@ -1,0 +1,16 @@
+{
+  "name": "typescript",
+  "version": "1.0.0",
+  "description": "Just practicing typescript",
+  "main": "index.js",
+  "scripts": {
+    "compile":"tsc",
+    "watch":"tsc -w",
+    "run-index": "nodemon ./compiled/index.js"
+  },
+  "keywords": [
+    "typescript"
+  ],
+  "author": "Yashraj Mishra",
+  "license": "MIT"
+}
