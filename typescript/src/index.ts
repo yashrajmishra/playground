@@ -1,11 +1,12 @@
 import { ArrayPlay } from "./arrayplay";
-let sampleArray: number[] = [];
-// Genrate a random array
-for (let whatever = 0; whatever < 10; whatever++) {
-  sampleArray.push(Math.floor(Math.random() * 100));
-}
-// use Class as an Object
-let customArray = new ArrayPlay(sampleArray);
-customArray.getArray();
 
-console.log(customArray.greatestMultiplier());
+// use Class as an Object
+let customArray = new ArrayPlay();
+
+//leatCode-Problems here
+// log time
+console.time("Solution");
+customArray.threeSumClosest([-1, 2, 1, -4],1);
+console.timeEnd("Solution");
+// log output
+console.log(customArray.threeSumClosest([-1, 2, 1, -4],1));

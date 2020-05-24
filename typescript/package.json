@@ -1,15 +1,16 @@
 {
-  "name": "typescript",
+  "name": "typescript-algo-leet-code",
   "version": "1.0.0",
-  "description": "Just practicing typescript",
+  "description": "Just practicing typescript with leet code",
   "main": "index.js",
   "scripts": {
-    "compile":"tsc",
-    "watch":"tsc -w",
-    "run-index": "nodemon ./compiled/index.js"
+    "watch": "tsc -w",
+    "run": "nodemon ./compiled/index.js",
+    "compile": "tsc"
   },
   "keywords": [
-    "typescript"
+    "typescript",
+    "nodemon"
   ],
   "author": "Yashraj Mishra",
   "license": "MIT"
