@@ -1,22 +1,20 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.ArrayPlay = void 0;
-var ArrayPlay = /** @class */ (function () {
-    function ArrayPlay() {
-    }
-    ArrayPlay.prototype.genrateRandomArray = function (length, range) {
-        var genratedArray = [];
-        for (var whatever = 0; whatever < length; whatever++) {
+class ArrayPlay {
+    genrateRandomArray(length, range) {
+        let genratedArray = [];
+        for (let whatever = 0; whatever < length; whatever++) {
             genratedArray.push(Math.floor(Math.random() * range));
         }
         console.log(genratedArray);
         return genratedArray;
-    };
-    ArrayPlay.prototype.greatestMultiplier = function (incomingArray) {
-        var largestNum = 0;
-        var largestNumPosition = [];
-        incomingArray.forEach(function (x, y) {
-            incomingArray.forEach(function (a, b) {
+    }
+    greatestMultiplier(incomingArray) {
+        let largestNum = 0;
+        let largestNumPosition = [];
+        incomingArray.forEach((x, y) => {
+            incomingArray.forEach((a, b) => {
                 if (y != b) {
                     if (x * a > largestNum) {
                         largestNum = x * a;
@@ -26,11 +24,11 @@ var ArrayPlay = /** @class */ (function () {
             });
         });
         console.log(largestNumPosition, largestNum);
-        return "The largest Multiple is " + incomingArray[largestNumPosition[0]] + " X " + incomingArray[largestNumPosition[0]] + " = " + largestNum + " @ " + largestNumPosition;
-    };
-    ArrayPlay.prototype.twoSum = function (nums, target) {
+        return `The largest Multiple is ${incomingArray[largestNumPosition[0]]} X ${incomingArray[largestNumPosition[0]]} = ${largestNum} @ ${largestNumPosition}`;
+    }
+    twoSum(nums, target) {
         // https://leetcode.com/problems/two-sum
-        var index1, index2 = 0;
+        let index1, index2 = 0;
         Loop1: for (index1 = 0; index1 < nums.length; index1++) {
             for (index2 = 0; index2 < nums.length; index2++) {
                 if (index1 != index2) {
@@ -40,31 +38,31 @@ var ArrayPlay = /** @class */ (function () {
                 }
             }
         }
-    };
-    ArrayPlay.prototype.maxArea = function (height) {
+    }
+    maxArea(height) {
         // https://leetcode.com/problems/container-with-most-water/
-        var len = height.length;
-        var area = 0;
-        for (var i = 0; i < len; i++) {
-            for (var j = i + 1; j < len; j++) {
+        let len = height.length;
+        let area = 0;
+        for (let i = 0; i < len; i++) {
+            for (let j = i + 1; j < len; j++) {
                 area = Math.max(area, Math.min(height[i], height[j]) * (j - i));
             }
         }
         return area;
-    };
-    ArrayPlay.prototype.threeSum = function (nums) {
+    }
+    threeSum(nums) {
         // TODO: little bit mistake
         // https://leetcode.com/problems/3sum/
-        var solutionSet = [];
+        let solutionSet = [];
         // make a checkList for array
-        var checkList = [];
-        for (var rubbish1 = 0; rubbish1 < nums.length; rubbish1++) {
+        let checkList = [];
+        for (let rubbish1 = 0; rubbish1 < nums.length; rubbish1++) {
             checkList.push(true);
         }
         // Main process
-        for (var a = 0; a < nums.length; a++) {
-            for (var b = 0; b < nums.length; b++) {
-                for (var c = 0; c < nums.length; c++) {
+        for (let a = 0; a < nums.length; a++) {
+            for (let b = 0; b < nums.length; b++) {
+                for (let c = 0; c < nums.length; c++) {
                     if (a != b && b != c && c != a && nums[a] + nums[b] + nums[c] == 0) {
                         if (checkList[a] == true &&
                             checkList[b] == true &&
@@ -81,15 +79,15 @@ var ArrayPlay = /** @class */ (function () {
         }
         console.log(checkList);
         return solutionSet;
-    };
-    ArrayPlay.prototype.threeSumClosest = function (nums, target) {
+    }
+    threeSumClosest(nums, target) {
         // https://leetcode.com/problems/3sum-closest/
-        nums.sort(function (a, b) { return a - b; });
-        var ans = null;
-        for (var a = 0; a < nums.length - 2; a++) {
-            for (var b = a + 1; b < nums.length - 1; b++) {
-                for (var c = b + 1; c < nums.length; c++) {
-                    var psudoAns = nums[a] + nums[b] + nums[c];
+        nums.sort((a, b) => a - b);
+        let ans = null;
+        for (let a = 0; a < nums.length - 2; a++) {
+            for (let b = a + 1; b < nums.length - 1; b++) {
+                for (let c = b + 1; c < nums.length; c++) {
+                    let psudoAns = nums[a] + nums[b] + nums[c];
                     if (ans === null) {
                         ans = psudoAns;
                     }
@@ -103,7 +101,6 @@ var ArrayPlay = /** @class */ (function () {
             }
         }
         return ans;
-    };
-    return ArrayPlay;
-}());
+    }
+}
 exports.ArrayPlay = ArrayPlay;
