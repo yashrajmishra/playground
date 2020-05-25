@@ -51,7 +51,7 @@ export class ArrayPlay {
     return area;
   }
   threeSum(nums: number[]) {
-    // TODO: little bit mistake
+    // FIXME: little bit mistake
     // https://leetcode.com/problems/3sum/
     let solutionSet: number[][] = [];
     // make a checkList for array

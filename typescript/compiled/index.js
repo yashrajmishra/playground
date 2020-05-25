@@ -11,4 +11,4 @@ let mySorting = new sortplay_1.SortPlay();
 // customArray.threeSumClosest([-1, 2, 1, -4],1);
 // console.timeEnd("Solution");
 // log output
-console.log(mySorting.merge([[1, 3], [2, 6], [8, 10], [15, 18]]));
+console.log(mySorting.containsNearbyAlmostDuplicate([1, 5, 9, 1, 5, 9], 2, 3));
