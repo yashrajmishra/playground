@@ -1,15 +1,21 @@
-import { ArrayPlay } from "./arrayplay";
-import { SortPlay } from "./sortplay";
+import { LeetCode } from "./leetcode";
 // use Class as an Object
-let customArray = new ArrayPlay();
-let mySorting = new SortPlay();
+let myFunction = new LeetCode();
 
 //leatCode-Problems here
-// log time
 
+// log time
 // console.time("Solution");
-// customArray.threeSumClosest([-1, 2, 1, -4],1);
 // console.timeEnd("Solution");
 
 // log output
-console.log(mySorting.containsNearbyAlmostDuplicate([1, 5, 9, 1, 5, 9], 2, 3));
+console.log(myFunction.intersection([4, 9, 5], [9, 4, 9, 8, 4]));
+
+// const genrateRandomArray = (length: number, range: number) => {
+//   let genratedArray: number[] = [];
+//   for (let whatever = 0; whatever < length; whatever++) {
+//     genratedArray.push(Math.floor(Math.random() * range));
+//   }
+//   console.log(genratedArray);
+//   return genratedArray;
+// };

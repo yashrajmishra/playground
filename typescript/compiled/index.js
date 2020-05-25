@@ -1,14 +1,19 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-const arrayplay_1 = require("./arrayplay");
-const sortplay_1 = require("./sortplay");
+const leetcode_1 = require("./leetcode");
 // use Class as an Object
-let customArray = new arrayplay_1.ArrayPlay();
-let mySorting = new sortplay_1.SortPlay();
+let myFunction = new leetcode_1.LeetCode();
 //leatCode-Problems here
 // log time
 // console.time("Solution");
-// customArray.threeSumClosest([-1, 2, 1, -4],1);
 // console.timeEnd("Solution");
 // log output
-console.log(mySorting.containsNearbyAlmostDuplicate([1, 5, 9, 1, 5, 9], 2, 3));
+console.log(myFunction.intersection([4, 9, 5], [9, 4, 9, 8, 4]));
+// const genrateRandomArray = (length: number, range: number) => {
+//   let genratedArray: number[] = [];
+//   for (let whatever = 0; whatever < length; whatever++) {
+//     genratedArray.push(Math.floor(Math.random() * range));
+//   }
+//   console.log(genratedArray);
+//   return genratedArray;
+// };
