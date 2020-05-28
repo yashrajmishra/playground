@@ -9,7 +9,7 @@ let myFunction = new LeetCode();
 // console.timeEnd("Solution");
 
 // log output
-console.log(myFunction.intersection([4, 9, 5], [9, 4, 9, 8, 4]));
+console.log(myFunction.myAtoi("  -1233"));
 
 // const genrateRandomArray = (length: number, range: number) => {
 //   let genratedArray: number[] = [];

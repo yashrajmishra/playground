@@ -195,4 +195,70 @@ export class LeetCode {
     }
     return answer;
   }
+  lengthOfLongestSubstring(s: string) {
+    //https://leetcode.com/problems/longest-substring-without-repeating-characters/
+    let lengthOfSubstring: number = 0;
+    let lengthOfString: number = s.length;
+    let hashMap = new Map();
+
+    for (let j = 0, i = 0; j < lengthOfString; j++) {
+      if (hashMap.has(s.charAt(j))) {
+        i = Math.max(hashMap.get(s.charAt(j)), i);
+      }
+      lengthOfSubstring = Math.max(lengthOfSubstring, j - i + 1);
+      hashMap.set(s.charAt(j), j + 1);
+    }
+    return lengthOfSubstring;
+  }
+  zigzagconvert(s: string, numRows: number) {
+    //https://leetcode.com/problems/zigzag-conversion/submissions/
+    //FIXME: A little bit mistake and aproach can be optimised
+    if (numRows == 1) {
+      return s;
+    }
+    let ans: string[] = [];
+    let row: number = 0;
+    let column: number = 0;
+    let tick: boolean = true;
+    let stringMap = new Map();
+    let testArray: number[][] = [];
+    for (let i = 0; i < s.length; i++) {
+      stringMap.set([row, column], s[i]);
+      console.log(s[i], row, column);
+      row += tick ? 1 : -1;
+      if (tick) {
+        tick = row <= numRows - 1 ? true : false;
+      } else {
+        tick = row == 0 ? true : false;
+        column++;
+      }
+    }
+    stringMap.forEach((a, b) => {
+      testArray.push(b);
+    });
+    testArray.sort();
+    console.log(testArray);
+    testArray.forEach((x) => {
+      ans.push(stringMap.get(x));
+    });
+    console.log(stringMap);
+    return ans.join("");
+  }
+  myAtoi(str: string) {
+    //https://leetcode.com/problems/string-to-integer-atoi/
+    //LOOK HERE: this can be done
+    let ans: number = 1;
+    let stringLength: number = str.length;
+    console.log(str.charCodeAt(2));
+    for (let i = str.length - 1, j = 1; i >= 0; i--, j *= 10) {
+      if (48 <= str.charCodeAt(i) && str.charCodeAt(i) <= 57) {
+        // ans += str[i] * j;
+        console.log(str[i]);
+      } else {
+      }
+      // console.log(str[i], j);
+    }
+
+    return ans;
+  }
 }

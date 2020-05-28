@@ -8,7 +8,7 @@ let myFunction = new leetcode_1.LeetCode();
 // console.time("Solution");
 // console.timeEnd("Solution");
 // log output
-console.log(myFunction.intersection([4, 9, 5], [9, 4, 9, 8, 4]));
+console.log(myFunction.myAtoi("  -1233"));
 // const genrateRandomArray = (length: number, range: number) => {
 //   let genratedArray: number[] = [];
 //   for (let whatever = 0; whatever < length; whatever++) {
