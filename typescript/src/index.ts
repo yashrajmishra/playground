@@ -1,21 +1,10 @@
-import { LeetCode } from "./leetcode";
+import LeetCode from "./leetcode";
+import ProjectEular from "./projecteuler";
 // use Class as an Object
-let myFunction = new LeetCode();
-
-//leatCode-Problems here
-
+let leetcodeprogram = new LeetCode();
+let projecteularprogram = new ProjectEular();
+console.clear();
 // log time
-// console.time("Solution");
-// console.timeEnd("Solution");
-
-// log output
-console.log(myFunction.myAtoi("  -1233"));
-
-// const genrateRandomArray = (length: number, range: number) => {
-//   let genratedArray: number[] = [];
-//   for (let whatever = 0; whatever < length; whatever++) {
-//     genratedArray.push(Math.floor(Math.random() * range));
-//   }
-//   console.log(genratedArray);
-//   return genratedArray;
-// };
+console.time("Solution");
+projecteularprogram.four();
+console.timeEnd("Solution");

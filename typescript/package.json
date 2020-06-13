@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "watch": "tsc -w",
-    "run": "nodemon ./compiled/index.js",
+    "run": "nodemon ./compiled/index.js -q",
     "compile": "tsc"
   },
   "keywords": [

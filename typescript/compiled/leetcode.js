@@ -1,6 +1,5 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.LeetCode = void 0;
 class LeetCode {
     greatestMultiplier(incomingArray) {
         let largestNum = 0;
@@ -265,4 +264,4 @@ class LeetCode {
         return ans;
     }
 }
-exports.LeetCode = LeetCode;
+exports.default = LeetCode;

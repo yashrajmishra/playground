@@ -1,4 +1,4 @@
-export class LeetCode {
+export default class LeetCode {
   greatestMultiplier(incomingArray: number[]) {
     let largestNum: number = 0;
     let largestNumPosition: number[] = [];
@@ -258,7 +258,6 @@ export class LeetCode {
       }
       // console.log(str[i], j);
     }
-
     return ans;
   }
 }
