@@ -17,7 +17,6 @@ class LeetCode {
         return `The largest Multiple is ${incomingArray[largestNumPosition[0]]} X ${incomingArray[largestNumPosition[0]]} = ${largestNum} @ ${largestNumPosition}`;
     }
     twoSum(nums, target) {
-        // https://leetcode.com/problems/two-sum
         let index1, index2 = 0;
         Loop1: for (index1 = 0; index1 < nums.length; index1++) {
             for (index2 = 0; index2 < nums.length; index2++) {
@@ -30,7 +29,6 @@ class LeetCode {
         }
     }
     maxArea(height) {
-        // https://leetcode.com/problems/container-with-most-water/
         let len = height.length;
         let area = 0;
         for (let i = 0; i < len; i++) {
@@ -41,15 +39,11 @@ class LeetCode {
         return area;
     }
     threeSum(nums) {
-        // FIXME: little bit mistake
-        // https://leetcode.com/problems/3sum/
         let solutionSet = [];
-        // make a checkList for array
         let checkList = [];
         for (let rubbish1 = 0; rubbish1 < nums.length; rubbish1++) {
             checkList.push(true);
         }
-        // Main process
         for (let a = 0; a < nums.length; a++) {
             for (let b = 0; b < nums.length; b++) {
                 for (let c = 0; c < nums.length; c++) {
@@ -71,7 +65,6 @@ class LeetCode {
         return solutionSet;
     }
     threeSumClosest(nums, target) {
-        // https://leetcode.com/problems/3sum-closest/
         nums.sort((a, b) => a - b);
         let ans = null;
         for (let a = 0; a < nums.length - 2; a++) {
@@ -93,8 +86,6 @@ class LeetCode {
         return ans;
     }
     merge(intervals) {
-        //FIXME: Still A minor mistake
-        // https://leetcode.com/problems/merge-intervals/
         let answer = [];
         Loop1: for (let inters1 = 0; inters1 < intervals.length; inters1++) {
             Loop2: for (let inters2 = 0; inters2 < intervals.length; inters2++) {
@@ -119,7 +110,6 @@ class LeetCode {
         return nums;
     }
     maximumGap(nums) {
-        //https://leetcode.com/problems/maximum-gap/
         let maxDiff = 0;
         if (nums.length >= 2) {
             nums.sort((a, b) => a - b);
@@ -132,7 +122,6 @@ class LeetCode {
         return maxDiff;
     }
     containsNearbyAlmostDuplicate(nums, k, t) {
-        // https://leetcode.com/problems/contains-duplicate-iii/
         let ans = false;
         let numsLength = nums.length;
         Loop1: for (let i = 0; i < numsLength; i++) {
@@ -151,7 +140,6 @@ class LeetCode {
         return ans;
     }
     isAnagram(s, t) {
-        //https://leetcode.com/problems/valid-anagram/
         let ans = false;
         if (s.length != t.length)
             return ans;
@@ -162,8 +150,6 @@ class LeetCode {
         return ans;
     }
     hIndex(citations) {
-        //https://leetcode.com/problems/h-index/submissions/
-        //FIXME: Wrong output for [0,1]
         let cHIndex = 0;
         let citationLength = citations.length;
         citations.sort((a, b) => b - a);
@@ -182,7 +168,6 @@ class LeetCode {
         return cHIndex;
     }
     intersection(nums1, nums2) {
-        //https://leetcode.com/problems/intersection-of-two-arrays/
         let answer = [];
         let arrayLength1 = nums1.length;
         let arrayLength2 = nums2.length;
@@ -198,7 +183,6 @@ class LeetCode {
         return answer;
     }
     lengthOfLongestSubstring(s) {
-        //https://leetcode.com/problems/longest-substring-without-repeating-characters/
         let lengthOfSubstring = 0;
         let lengthOfString = s.length;
         let hashMap = new Map();
@@ -212,8 +196,6 @@ class LeetCode {
         return lengthOfSubstring;
     }
     zigzagconvert(s, numRows) {
-        //https://leetcode.com/problems/zigzag-conversion/submissions/
-        //FIXME: A little bit mistake and aproach can be optimised
         if (numRows == 1) {
             return s;
         }
@@ -247,19 +229,15 @@ class LeetCode {
         return ans.join("");
     }
     myAtoi(str) {
-        //https://leetcode.com/problems/string-to-integer-atoi/
-        //LOOK HERE: this can be done
         let ans = 1;
         let stringLength = str.length;
         console.log(str.charCodeAt(2));
         for (let i = str.length - 1, j = 1; i >= 0; i--, j *= 10) {
             if (48 <= str.charCodeAt(i) && str.charCodeAt(i) <= 57) {
-                // ans += str[i] * j;
                 console.log(str[i]);
             }
             else {
             }
-            // console.log(str[i], j);
         }
         return ans;
     }
