@@ -9,5 +9,5 @@ let leetcodeprogram = new leetcode_1.default();
 let projecteularprogram = new projecteuler_1.default();
 console.clear();
 console.time("Solution");
-projecteularprogram.ten();
+projecteularprogram.sixteen();
 console.timeEnd("Solution");
