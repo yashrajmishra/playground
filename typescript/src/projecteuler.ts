@@ -1,3 +1,16 @@
+import _ from "lodash";
+import {
+  atan2,
+  chain,
+  derivative,
+  e,
+  evaluate,
+  log,
+  pi,
+  pow,
+  round,
+  sqrt,
+} from "mathjs";
 export default class ProjectEular {
   isPrime(num: number): boolean {
     for (let i = 2, s = Math.floor(Math.sqrt(num)); i <= s; i++)
@@ -180,7 +193,7 @@ export default class ProjectEular {
     //   .map((x) => +x)
     //   .reduce((a, b) => a + b);
     // console.log(ans);
-    function getNumber(pow:number) {
+    function getNumber(pow: number) {
       let digits = [];
       digits[0] = 1;
       while (pow > 0) {
@@ -196,7 +209,7 @@ export default class ProjectEular {
       }
       return digits;
     }
-    function addNumber(power:number) {
+    function addNumber(power: number) {
       let totalNum = getNumber(power);
       let sum = 0;
       for (let i = totalNum.length - 1; i >= 0; i--) sum += totalNum[i];
