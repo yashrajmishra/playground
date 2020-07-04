@@ -6,6 +6,6 @@ let projecteularprogram = new ProjectEular();
 console.clear();
 // log time
 console.time("Solution");
-// projecteularprogram.sixteen();
+projecteularprogram.twenty();
 
 console.timeEnd("Solution");

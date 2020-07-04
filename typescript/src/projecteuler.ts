@@ -218,4 +218,25 @@ export default class ProjectEular {
     console.log(addNumber(10));
     console.log(addNumber(1000));
   }
+  seventeen() {
+    //FIXME: Unable to understand
+  }
+  eightteen() {
+    //FIXME: Unable to understand
+  }
+  nineteen() {
+    //FIXME: Unable to understand
+  }
+  twenty() {
+    let n: number = 10;
+    let facto: number = 1;
+    let ans: number = 0;
+    for (; 1 <= n; n--) facto *= n;
+    facto
+      .toString()
+      .split("")
+      .map((val) => parseInt(val))
+      .forEach((val) => (ans += val));
+    console.log(ans);
+  }
 }

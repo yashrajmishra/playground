@@ -6,7 +6,8 @@
   "scripts": {
     "watch": "tsc -w",
     "run": "nodemon ./compiled/index.js -q",
-    "compile": "tsc"
+    "compile": "tsc",
+    "run-scratch":"nodemon ./compiled/scratch.js -q"
   },
   "keywords": [
     "typescript",

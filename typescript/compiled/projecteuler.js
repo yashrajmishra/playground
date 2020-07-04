@@ -191,5 +191,24 @@ class ProjectEular {
         console.log(addNumber(10));
         console.log(addNumber(1000));
     }
+    seventeen() {
+    }
+    eightteen() {
+    }
+    nineteen() {
+    }
+    twenty() {
+        let n = 10;
+        let facto = 1;
+        let ans = 0;
+        for (; 1 <= n; n--)
+            facto *= n;
+        facto
+            .toString()
+            .split("")
+            .map((val) => parseInt(val))
+            .forEach((val) => (ans += val));
+        console.log(ans);
+    }
 }
 exports.default = ProjectEular;
