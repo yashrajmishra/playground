@@ -10,6 +10,7 @@ import {
   pow,
   round,
   sqrt,
+  factorial,
 } from "mathjs";
 export default class ProjectEular {
   isPrime(num: number): boolean {
@@ -228,15 +229,15 @@ export default class ProjectEular {
     //FIXME: Unable to understand
   }
   twenty() {
-    let n: number = 10;
+    let n: number = 100;
     let facto: number = 1;
     let ans: number = 0;
     for (; 1 <= n; n--) facto *= n;
-    facto
-      .toString()
-      .split("")
+        facto
+      .toLocaleString()
+      .split("").filter(val => val!==",")
       .map((val) => parseInt(val))
       .forEach((val) => (ans += val));
-    console.log(ans);
+    console.log( ans );
   }
 }

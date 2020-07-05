@@ -198,14 +198,14 @@ class ProjectEular {
     nineteen() {
     }
     twenty() {
-        let n = 10;
+        let n = 100;
         let facto = 1;
         let ans = 0;
         for (; 1 <= n; n--)
             facto *= n;
         facto
-            .toString()
-            .split("")
+            .toLocaleString()
+            .split("").filter(val => val !== ",")
             .map((val) => parseInt(val))
             .forEach((val) => (ans += val));
         console.log(ans);
